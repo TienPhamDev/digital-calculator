@@ -1,0 +1,20 @@
+/*
+  Grid Layout
+
+*/
+.grid{
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 0.25rem;
+}
+.grid-item-input{
+  grid-column:1/-1;
+}
+.grid-item-ac{
+  grid-column:1/4;
+}
+.grid-item-x{
+  grid-column: -1/1;
+}
