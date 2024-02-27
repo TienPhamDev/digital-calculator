@@ -9,13 +9,31 @@ calculator.addEventListener("click", (e) => {
       calculatorBTN[0].value += e.target.textContent;
     } 
   }
-  if (e.target.textContent === "=") {
+  if ( e.target.textContent === "=") {
     const numString = calculatorBTN[0].value;
     
     let calculate = new Function('return ' + numString);
     calculatorBTN[0].value = calculate();
   }
   if (e.target.textContent === "AC") {
+    calculatorBTN[0].value = "";
+   }
+});
+
+calculator.addEventListener("keydown", (e) => {
+  for (let i = 0; i < calculatorBTN.length; i++) {
+    
+    if (e.key === calculatorBTN[i].name) {
+      calculatorBTN[0].value += e.target.textContent;
+    } 
+  }
+  if ( e.key === "Enter") {
+    const numString = calculatorBTN[0].value;
+    
+    let calculate = new Function('return ' + numString);
+    calculatorBTN[0].value = calculate();
+  }
+  if (e.key === "Delete") {
     calculatorBTN[0].value = "";
    }
  });
