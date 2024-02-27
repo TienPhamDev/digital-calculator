@@ -1,21 +1,7 @@
 const calculator = document.querySelectorAll(".calculator")[0];
 const calculatorBTN = calculator.children;
 
-function add(a, b) {
-  return a + b;
-}
 
-function subtract(a, b) {
-  return a - b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
 calculator.addEventListener("click", (e) => {
   for (let i = 0; i < calculatorBTN.length; i++) {
     
@@ -26,8 +12,10 @@ calculator.addEventListener("click", (e) => {
   if (e.target.textContent === "=") {
     const numString = calculatorBTN[0].value;
     
+    let calculate = new Function('return ' + numString);
+    calculatorBTN[0].value = calculate();
   }
   if (e.target.textContent === "AC") {
-    calculatorBTN[0].value = 0;
+    calculatorBTN[0].value = "";
    }
  });
