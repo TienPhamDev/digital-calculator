@@ -28,7 +28,7 @@ body{
 .calculator > button{
   color: #ffffff;
   background-color: #50545d;
-  font-size: 1rem;
+  font-size: 1.5rem;
 
   border-radius: 100px;
   
@@ -48,8 +48,8 @@ body{
 
 */
 .grid{
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 50%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(6,1fr);
